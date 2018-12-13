@@ -6,7 +6,7 @@ This template is identical to the webpack sapper-template but with additional CS
 
 A word of warning: because of how svelte-preprocessors and tailwind both work, the build time when using tailwind is very, very slow.
 
-If you use [rollup](https://rollupjs.org/), then check out [the rollup version]().
+If you use [rollup](https://rollupjs.org/), then check out [the rollup version](https://github.com/pngwn/sapper-rollup-postcss).
 
 ## Install
 
