@@ -11,6 +11,7 @@ const preprocessOptions = {
 		postcss: {
 			plugins: [
 				require("postcss-import")(),
+				require("postcss-url")(),
 				require("tailwindcss")(tailwind),
 				require("autoprefixer")({ browsers: "last 4 version" })
 			]
@@ -73,7 +74,10 @@ module.exports = {
 						options: {
 							css: false,
 							generate: "ssr",
-							dev
+							dev,
+							preprocess: require("svelte-preprocess")(
+								preprocessOptions
+							)
 						}
 					}
 				}

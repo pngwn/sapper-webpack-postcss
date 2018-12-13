@@ -2,18 +2,18 @@
 	<title>Sapper project template</title>
 </svelte:head>
 
-<div class="width-full h-12 "></div>
-<h1 class="text-center m-0 mb-1 font-bold uppercase text-5xl sm:text-green md:text-red lg:text-yellow">Great success!</h1>
+<div class="width-full h-12"></div>
+<h1 class="heading">Great success!</h1>
 
-<figure class="m-0 mb-1 text-center mx-auto my-0">
-	<img class="width-full max-w-md m-0 mb-1" alt='Borat' src='great-success.png'>
+<figure class="feature">
+	<img class="image" alt='Borat' src='great-success.png'>
 	<figcaption>HIGH FIVE!</figcaption>
 </figure>
 
-<p class="text-center m-auto m-auto mx-auto my-1"><strong>Try editing this file (routes/index.html) to test hot module reloading.</strong></p>
+<p class="para"><strong>Try editing this file (routes/index.html) to test hot module reloading.</strong></p>
 
 <style>
-	@import './_tailwind.css';
+	@import "./_tailwind.css";
 
 	/* 	you can't do css gradients in tailwind apparently, 
 		this was just to test autopreficer */
@@ -21,5 +21,41 @@
 	div {
 		background: linear-gradient(to bottom, white, black);
 	}
+
+	/* tailwind directives work */
+
+	.feature {
+		@apply text-center mx-auto my-4;
+	}
+
+	.heading {
+		@apply text-center m-0 mb-4 font-bold uppercase text-5xl;
+	}
+
+	.para {
+		@apply text-center m-auto m-auto mx-auto my-4;
+	}
+
+	.img {
+		@apply  max-w-md m-0 mb-4;
+	}
+
+	/*@screen sm {
+		.heading {
+			@apply text-green;
+		}
+	}
+
+	@screen md {
+		.heading {
+			@apply text-red;
+		}
+	}
+
+	@screen lg {
+		.heading {
+			@apply text-yellow;
+		}
+	}*/
 
 </style>
